@@ -50,4 +50,4 @@ def time_sorting_algorithm(sorting_algorithm,array):
 def create_random_array(length):
     return np.random.rand(length)
 
-#Führen Sie hier ihre Befehle aus
+# Führen Sie hier ihre Befehle aus
