@@ -7,14 +7,13 @@
 \usepackage{tikz}
 \usepackage{minted}
 \setminted{
-	linenos,
 	style=gruvbox-light,
 	breaklines,
 	frame=single,
 	xleftmargin=0.1\textwidth,
 	xrightmargin=0.1\textwidth,
 	bgcolor=gray!10,
-	fontsize=\footnotesize,
+	fontsize=\scriptsize,
 }
 \renewcommand\listingscaption{Quellcode}
 \title{Auftrag zu Mergesort}
@@ -50,23 +49,11 @@ Zählen Sie bei beiden Verfahren, wie oft Sie zwei Zahlen miteinander vergleiche
 	\clearpage
 	\item Implementieren Sie Mergesort mit Hilfe der Vorlage auf moodle.
 
-		Vergleichen Sie die Laufzeiten von Mergesort und Bubblesort für zufällig generierte Arrays von den Längen 10, 1000 und 100000. Sie finden alle entsprechenden Funktionen in der Vorlage.
+		Vergleichen Sie die Laufzeiten von Mergesort und Bubblesort für zufällig generierte Arrays von den Längen 10, 1000 und 100000. Sie finden alle entsprechenden Funktionen in der Vorlage. \medskip
+
 		\begin{listing}[H]
 			\inputminted{python}{mergesort-vorlage.py}	
 		\caption{Vorlage für Mergesort in Python, wie sie auf moodle zu finden ist.}
 		\end{listing}
-		
 \end{enumerate}
-
-% \begin{tikzpicture}
-% 	\fill[black] (0,0) rectangle (16,9);
-% 	\begin{scope}[shift={({(16-7*\distance)/2},6)}]
-% 		\node[white,right] at (-1.7,1.5) {$\bullet$ Implementieren Sie Mergesort in Python.};
-% 		\node[white,right] at (-1.7,0.8) {$\phantom{\bullet}$ Sie finden dazu eine Vorlage auf moodle.};
-% 		\node[white,right] at (-1.7,0) {$\phantom{\bullet}$ Vergleichen Sie die Laufzeiten von};
-% 		\node[white,right] at (-1.7,-0.7) {$\phantom{\bullet}$ Mergesort und Bubblesort.};
-% 		\node[white,right] at (-1.7,-1.4) {$\phantom{\bullet}$ Sie finden die entsprechenden Funktionen };
-% 		\node[white,right] at (-1.7,-2.1) {$\phantom{\bullet}$ in der Vorlage.};
-% 	\end{scope}
-% \end{tikzpicture}
 \end{document}
