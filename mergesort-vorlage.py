@@ -1,7 +1,6 @@
 import numpy as np
 import time
 
-
 def merge(array1, array2):
     merged_list=[];
     [i,j]=[0,0];
@@ -35,9 +34,9 @@ def bubble_sort(array):
     swapped = False
     for i in range(n):
         for j in range(n-i-1):
-            if array[j] > array[j + 1]:
+            if array[j] > array[j+1]:
                 swapped = True
-                array[j], array[j + 1] = array[j + 1], array[j]
+                array[j], array[j+1] = array[j+1], array[j]
         if not swapped:
             return array
     return array
@@ -46,7 +45,7 @@ def time_sorting_algorithm(sorting_algorithm,array):
     start_time=time.time()
     sorting_algorithm(array)
     end_time=time.time()
-    return(end_time-start_time)
+    return end_time-start_time
 
 def create_random_array(length):
     return np.random.rand(length)
