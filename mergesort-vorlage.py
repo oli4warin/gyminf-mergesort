@@ -23,11 +23,9 @@ def second_half(array):
     #Implementieren Sie hier eine Funktion, die
     # - passend zu first_half - die zweite
     #Hälfte eines arrays zurück gibt.
-    return array
 
 def merge_sort(array):
     #Implementieren Sie hier Mergesort rekursiv
-    return array
 
 def bubble_sort(array):
     n = len(array)
