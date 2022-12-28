@@ -21,7 +21,7 @@
 
 \begin{document}
 \maketitle
-\tikzset{card/.style={rectangle,draw=black,inner xsep=0.5cm,inner ysep=0.5cm, thick,rounded corners,fill=gray!10,node distance=1.5cm}}
+\tikzset{card/.style={rectangle,draw=black,inner xsep=0.7cm,inner ysep=0.7cm, thick,rounded corners,fill=gray!10,node distance=1.9cm}}
 \newcommand\unsortedArray[1]{
 	\begin{figure}[H]
 		\centering
@@ -38,22 +38,45 @@
 		\caption{#1}
 	\end{figure}
 }
-\def\numberOfCopies{4}
+\def\copies{4}
 \begin{enumerate}
 	\item  Sortieren Sie die folgende Liste sowohl mit Mergesort als auch mit Bubblesort.
-		\unsortedArray{Zu sortierende Liste}
-Zählen Sie bei beiden Verfahren, wie oft Sie zwei Zahlen miteinander vergleichen. \medskip
+	      \unsortedArray{Zu sortierende Liste}
+	      Zählen Sie bei beiden Verfahren, wie oft Sie zwei Zahlen miteinander vergleichen. \medskip
 
-			\emph{Hinweis:} Schneiden Sie die Zahlen aus, um so einfacher Umordnen zu können. Sie finden daher hier noch \numberOfCopies~Kopien der Liste.
-		\foreach \x in {1,...,\numberOfCopies} {\unsortedArray{Zu sortierende Liste (Kopie \x)}}
-	\clearpage
+	      \emph{Hinweis:} Schneiden Sie die Zahlen aus, um so einfacher Umordnen zu können. Sie finden daher hier noch \copies~Kopien der Liste.
+	      \begin{figure}[H]
+		      \centering
+		      \begin{tikzpicture}
+			      \node[card] (A)  {\(15\)};
+			      \node[card,right of=A] (B) {\(16\)};
+			      \node[card,right of=B] (C) {\(19\)};
+			      \node[card,right of=C] (D) {\(11\)};
+			      \node[card,right of=D] (E) {\(13\)};
+			      \node[card,right of=E] (F) {\(20\)};
+			      \node[card,right of=F] (G) {\(17\)};
+			      \node[card,right of=G] (H) {\(12\)};
+			      \foreach \x in {1,...,\copies} {
+					      \node[card,below of=A] (A)  {\(15\)};
+					      \node[card,right of=A] (B) {\(16\)};
+					      \node[card,right of=B] (C) {\(19\)};
+					      \node[card,right of=C] (D) {\(11\)};
+					      \node[card,right of=D] (E) {\(13\)};
+					      \node[card,right of=E] (F) {\(20\)};
+					      \node[card,right of=F] (G) {\(17\)};
+					      \node[card,right of=G] (H) {\(12\)};
+				      }
+		      \end{tikzpicture}
+		      \caption{Kopien der Liste zum ausschneiden}
+	      \end{figure}
+	      \clearpage
 	\item Implementieren Sie Mergesort mit Hilfe der Vorlage auf moodle.
 
-		Vergleichen Sie die Laufzeiten von Mergesort und Bubblesort für zufällig generierte Arrays von den Längen 10, 1000 und 100000. Sie finden alle entsprechenden Funktionen in der Vorlage. \medskip
+	      Vergleichen Sie die Laufzeiten von Mergesort und Bubblesort für zufällig generierte Arrays von den Längen 10, 1000 und 100000. Sie finden alle entsprechenden Funktionen in der Vorlage. \medskip
 
-		\begin{listing}[H]
-			\inputminted{python}{mergesort-vorlage.py}	
-		\caption{Vorlage für Mergesort in Python, wie sie auf moodle zu finden ist.}
-		\end{listing}
+	      \begin{listing}[H]
+		      \inputminted{python}{mergesort-vorlage.py}
+		      \caption{Vorlage für Mergesort in Python, wie sie auf moodle zu finden ist.}
+	      \end{listing}
 \end{enumerate}
 \end{document}
